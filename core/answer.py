@@ -160,7 +160,7 @@ def answer(query, chunks, vecs, llm, floor=CONFIDENCE_FLOOR):
             # Deterministic. For a classification-shaped task, creativity is
             # not a feature: the same question should get the same answer.
             temperature=0,
-            max_tokens=200,
+            max_tokens=512,
         )
         parsed = json.loads(resp.choices[0].message.content)
     except Exception as e:
