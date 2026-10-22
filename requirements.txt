@@ -1,0 +1,14 @@
+# ---- web layer -------------------------------------------------------------
+Django
+djangorestframework
+django-cors-headers
+gunicorn
+
+# ---- retrieval + answering -------------------------------------------------
+# fastembed runs the embedding model through ONNX instead of PyTorch: ~90MB
+# instead of ~2GB, and no torch dependency at all.
+fastembed
+numpy
+rapidfuzz
+groq
+python-dotenv

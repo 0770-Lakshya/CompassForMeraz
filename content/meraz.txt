@@ -1,0 +1,192 @@
+title: Meraz 7.0
+
+-------------------------------------------------------------------------------
+ EVERYTHING BELOW IS THE BOT'S ENTIRE KNOWLEDGE.
+ If a fact is not written here, the bot refuses rather than guesses.
+
+ Sourced from meraz7.vercel.app on 21 October 2026. Text above the first
+ heading is ignored by the parser, so these notes are safe to keep here.
+
+ GAPS — NOT WRITTEN BECAUSE THEY COULD NOT BE VERIFIED. Fill these in; the bot
+ will refuse to answer about them until you do, which is the correct behaviour.
+   * EXACT DATES. Not published on the site, not findable by search, and
+     meraz.iitbhilai.ac.in blocks automated fetching. This is the single most
+     asked question an FAQ bot gets — add it first.
+   * The individual events inside each of the five categories. The /events/
+     page showed "LOADING 0% / SETTING UP THE STALLS", so the listings are
+     rendered client-side and were not readable.
+   * Sponsor names — every tier still reads "To be announced".
+   * Day 1 pronite, if there is one. Only Day 2 and Day 3 are named.
+   * "Pran · Ritviz" appears on the home page with YouTube and Spotify links
+     but with no context. Pran is a Ritviz album, so this may be a music embed
+     rather than an artist booking. NOT written as a performance — confirm
+     before adding.
+   * Prize money, team sizes and rules for competitions.
+   * Registration deadlines and the CA application closing date.
+-------------------------------------------------------------------------------
+
+# What is Meraz
+Meraz is the annual techno-cultural fest of IIT Bhilai. It combines technology,
+art and culture, with tech showcases, coding battles, performances, fashion and
+food.
+
+# What is the theme of Meraz 7.0
+url: https://meraz7.vercel.app/about/
+Meraz 7.0 is the Retro India edition, themed "The Great Indian Reverie", with
+the tagline "Rewind. Replay. Rejoice." The theme draws on nostalgic Indian
+imagery such as village projectors, roadside trucks and transistor radios.
+
+# How big is Meraz
+url: https://meraz7.vercel.app/about/
+Meraz features over 100 events, draws more than 4,000 participants, and reaches
+an online audience of over 2,500.
+
+# When is Meraz 7.0
+The exact dates have not been announced on the Meraz website yet. The fest runs
+across three days. Follow @meraziitbh on Instagram or check the official
+website for the announcement.
+
+# Where is Meraz held
+url: https://meraz7.vercel.app/contact/
+Meraz is held at the Indian Institute of Technology Bhilai, Durg,
+Chhattisgarh, India - 491002.
+
+# What passes are available and what do they cost
+url: https://meraz7.vercel.app/passes/
+There are four passes. The Access Pass is Rs 99 for single-day entry excluding
+Pronites. The Day 2 Pronites Pass is Rs 299. The Day 3 Pronites Pass is Rs 499.
+The Accommodation Pass is Rs 3,499 and covers three days of stay and food.
+
+## Is there a group discount on passes
+url: https://meraz7.vercel.app/passes/
+Yes, for groups of 10 or more. The Day 2 Pronites Pass drops to Rs 249 per
+person and Day 3 to Rs 449, each saving Rs 50. The Accommodation Pass drops to
+Rs 2,999, saving Rs 500. The Access Pass has no group discount.
+
+## What does the Access Pass include
+url: https://meraz7.vercel.app/passes/
+The Access Pass costs Rs 99 and gives single-day entry to Meraz events on any
+one day, not including Pronites. It is for students only and requires a valid
+student ID.
+
+## What does the Accommodation Pass include
+url: https://meraz7.vercel.app/passes/
+The Accommodation Pass costs Rs 3,499 and includes three days of accommodation
+and food, access to all events, and entry to all Pronites.
+
+## Do I need a pass to enter the campus
+url: https://meraz7.vercel.app/passes/
+Yes. Campus entry requires a valid Access Pass or Student Pass.
+
+## Where do I buy passes
+url: https://meraz7.vercel.app/passes/
+Passes are bought through meraz.ksverse.in, linked from the Passes page on the
+Meraz website.
+
+## Who do I contact about a pass or payment problem
+url: https://meraz7.vercel.app/passes/
+Call +91 62815 21833 or +91 76674 16430 for queries or issues with passes.
+
+# Who is performing at the Pronites
+url: https://meraz7.vercel.app/passes/
+The Day 2 Pronite features Jyotirmayee and D.J. Prerak. The Day 3 Pronite
+features Nakash Aziz and Qafila, The Band.
+
+# What kinds of events are there
+url: https://meraz7.vercel.app/events/
+Meraz events fall into five categories: Culturals, Sci-Tech, Informals and
+Varchasva, E-Cell, and FinTech.
+
+# What is the Campus Ambassador programme
+url: https://meraz7.vercel.app/outreach/
+The Campus Ambassador programme lets students from other colleges promote Meraz
+and earn rewards based on how many registrations they refer. Meraz 7.0 has 31
+ambassadors across 9 colleges, including IIT Patna, NIT Raipur and Manipal
+University Jaipur.
+
+## How do I become a Campus Ambassador
+url: https://meraz7.vercel.app/outreach/
+Apply through the Google Form linked on the Outreach page. A full rulebook is
+available there as a PDF.
+
+## What do Campus Ambassadors get
+url: https://meraz7.vercel.app/outreach/
+Rewards scale with referrals. At 10 or more you get a free CA pass for the Day
+3 concert, two stall coupons, merch and a certificate. At 25 or more you get a
+2-day pass covering both concert nights, four coupons and an Instagram
+shoutout.
+
+## What are the top Campus Ambassador rewards
+url: https://meraz7.vercel.app/outreach/
+At 50 or more referrals you get two 2-day passes, eight combo coupons, a gift
+hamper, an artist autograph and a bus pool subsidy. At 75 or more you also get
+a backstage crew pass, sixteen coupons, a leadership certificate and a memento
+on the main stage.
+
+# Which cafes are partnered with Meraz
+url: https://meraz7.vercel.app/outreach/
+Three cafes in Bhilai are Meraz partners: Karavas Cafe, Filtr Coffee and Fast
+N Fresh Cafe. Cafes can register through the form on the Outreach page.
+
+# Can influencers work with Meraz
+url: https://meraz7.vercel.app/outreach/
+Yes. Nine creators are already listed as partners, including Shriya Diwan, Yash
+Pandey and Karan Bagga. Influencer applications are marked opening soon, and a
+rulebook is on the Outreach page.
+
+# How do I contact Meraz
+url: https://meraz7.vercel.app/contact/
+Email meraz@iitbhilai.ac.in. The Contact page also lists direct phone numbers
+for each team.
+
+## Who is the Fest Head
+url: https://meraz7.vercel.app/contact/
+Arush Ranjan is the Fest Head, reachable on +91 7780070550.
+
+## Who is the Fest Convener
+url: https://meraz7.vercel.app/contact/
+Kumar Utkarsh is the Fest Convener, reachable on +91 7667416430.
+
+## Who do I contact about cultural events
+url: https://meraz7.vercel.app/contact/
+Andiyappan Rohan on +91 6303011550 or Tancia Boro on +91 7002108549.
+
+## Who do I contact about Sci-Tech events
+url: https://meraz7.vercel.app/contact/
+Aditya Girish Seoker on +91 9511629108 or Kanad Bajpai on +91 9302860795.
+
+## Who do I contact about sports and informal events
+url: https://meraz7.vercel.app/contact/
+Shubham Jha on +91 8797717222 or Harsh Vardhan Singh on +91 8400281102.
+
+## Who do I contact about outreach or campus ambassadors
+url: https://meraz7.vercel.app/outreach/
+Harsh, the Outreach Lead, on +91 93275 96343. The official Instagram is
+@meraziitbh.
+
+## Who do I contact about finance or payments
+url: https://meraz7.vercel.app/contact/
+Varshitha on +91 6281521833 or Ankan Mondal on +91 9064825588.
+
+## Who do I contact about media and design
+url: https://meraz7.vercel.app/contact/
+Manjot Singh on +91 7003603365 or Amit Patel on +91 8602275578.
+
+## Who do I contact about management
+url: https://meraz7.vercel.app/contact/
+Banotu Santhosh on +91 7013751880.
+
+# Can my company sponsor Meraz
+url: https://meraz7.vercel.app/sponsors/
+Yes. Meraz 7.0 has open slots for a Title Sponsor, a Co-Title Sponsor, six
+Platinum Sponsors and eight Gold Sponsors. Email meraz@iitbhilai.ac.in to
+discuss sponsorship.
+
+# Is accommodation available for outside participants
+url: https://meraz7.vercel.app/passes/
+Yes, through the Accommodation Pass at Rs 3,499, which covers three days of
+accommodation and food plus access to all events and Pronites.
+
+# What is the official Meraz Instagram
+url: https://meraz7.vercel.app/outreach/
+The official Meraz Instagram account is @meraziitbh.

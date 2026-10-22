@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  demo.html — a local page to try the widget against a running backend.
+
+  HOW TO RUN (two terminals, both from the project root):
+
+    1)  python manage.py runserver        -> backend on :8000
+    2)  cd widget
+        python -m http.server 5500        -> this page on :5500
+
+  Then open  http://localhost:5500/demo.html
+
+  DO NOT open this file by double-clicking it. On a file:// URL the browser
+  treats the origin as "null", and a cross-origin fetch from it behaves
+  differently — a confusing half-hour with a boring cause. Always go through
+  http://localhost:5500.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot demo</title>
+  <style>
+    body { font: 16px/1.6 ui-sans-serif, system-ui, sans-serif;
+           max-width: 42rem; margin: 4rem auto; padding: 0 1rem; color: #111; }
+    code { background: #f4f4f4; padding: .15em .4em; border-radius: 3px; }
+    li { margin: .3rem 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #141414; color: #eee; }
+      code { background: #262626; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bot demo</h1>
+  <p>The chat bubble is bottom-right. It answers only from
+     <code>content/meraz.txt</code> — nothing else.</p>
+
+  <p>Worth trying, because each probes a different behaviour:</p>
+  <ul>
+    <li><em>"when is meraz"</em> — a straight lookup</li>
+    <li><em>"is there a registration fee"</em> — a yes/no question, where the
+        first word has to be the truthful answer</li>
+    <li><em>"can first years take part"</em> — needs inference from the text,
+        not a keyword match</li>
+    <li><em>"what is the wifi password"</em> — <strong>must refuse.</strong>
+        A bot that invents answers is worse than no bot.</li>
+  </ul>
+
+  <script src="bot-widget.js"
+          data-api="http://localhost:8000"
+          data-name="Ask about Meraz"
+          data-accent="#e5484d"></script>
+</body>
+</html>

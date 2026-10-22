@@ -1,0 +1,90 @@
+# render.yaml — deployment for the Meraz question bot.
+#
+# WHY THERE IS NO DATABASE HERE
+# -----------------------------
+# Render's free tier has an EPHEMERAL filesystem: every deploy and every
+# restart wipes anything written at runtime. That is what forces the main
+# Compass project onto Postgres — it writes indexes at runtime, from
+# /auto-register and /ingest, so a restart would destroy real data.
+#
+# This bot never writes at runtime. Its knowledge is content/meraz.txt, which
+# IS committed, and data/ is only a derived index — so the fix is not a
+# database, it is rebuilding the index during the build. `manage.py ingest`
+# below does exactly that, and the result is baked into the image.
+#
+# A database here would store data nothing ever changes, add a connection to
+# fail, and cost memory on a 512MB box. The right amount of infrastructure is
+# sometimes none.
+
+services:
+  - type: web
+    name: meraz-bot
+    runtime: python
+
+    # TWO JOBS, and the second is easy to overlook.
+    #
+    #  1. Rebuild data/chunks.json and data/embeddings.npy from the committed
+    #     text. data/ is gitignored, so without this the deployed server boots
+    #     with ZERO chunks and refuses every question — with no error anywhere,
+    #     because "I don't have information about that" is a valid answer.
+    #     /health reporting `chunks: 0` is how you would spot it.
+    #
+    #  2. Download the ~90MB embedding model AT BUILD TIME. ingest loads the
+    #     embedder, so this happens as a side effect, into .model_cache in the
+    #     repo folder. Build output is baked into the image; /tmp is not. Skip
+    #     this and every cold boot re-downloads 90MB from HuggingFace before it
+    #     can answer anything, which is most of a 30-60s cold start.
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py ingest content/meraz.txt
+
+    # --workers 1 IS LOAD-BEARING. The chunk index and the answer cache live in
+    #   ONE process's memory. A second worker would hold its own copy of both:
+    #   the cache would be split in half, halving its hit rate, which on a free
+    #   token budget is the difference between answering and rate-limiting.
+    #
+    # --threads 8 handles concurrency instead. Threads share process memory,
+    #   which is what the state above requires, and the work is I/O-bound
+    #   (waiting on Groq), so the GIL is released during the waits.
+    #
+    # --timeout 120 rather than gunicorn's default 30. A cold request pays for
+    #   the model load; 30s would kill the worker mid-answer and the visitor
+    #   would see a connection reset with "WORKER TIMEOUT" in the log and no
+    #   traceback.
+    startCommand: >
+      gunicorn compass.wsgi:application
+      --bind 0.0.0.0:$PORT
+      --workers 1
+      --threads 8
+      --timeout 120
+
+    # Render pings this to decide whether the process is alive. It also reports
+    # the chunk count, so one look tells you whether the build's ingest worked.
+    healthCheckPath: /health
+
+    envVars:
+      # Set this by hand in the Render dashboard. sync:false keeps it out of
+      # the repo.
+      - key: GROQ_API_KEY
+        sync: false
+
+      # Django refuses to start without one. generateValue makes Render create
+      # a strong random value once and keep it across deploys.
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+
+      # Off in production: with DEBUG on, Django returns full stack traces —
+      # including settings values — in HTTP error responses.
+      - key: DJANGO_DEBUG
+        value: "false"
+
+      # Render terminates TLS and proxies to the app, so the Host header is the
+      # onrender.com name (or a custom domain you add later).
+      - key: DJANGO_ALLOWED_HOSTS
+        value: "*"
+
+      # WHICH SITES MAY CALL THIS BOT. Read the long note in compass/settings.py
+      # before widening it: with no restriction, anyone who finds the URL can
+      # spend your free token budget, and the bot stops answering for Meraz.
+      - key: CORS_ORIGINS
+        value: "https://meraz.iitbhilai.ac.in,https://meraz7.vercel.app"
