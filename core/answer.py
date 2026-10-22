@@ -19,9 +19,18 @@ read more: https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/
 """
 
 import json
+import logging
 import os
 
 from core.retrieval import search
+
+# NOT print(). Under gunicorn stdout is block-buffered when it is not a
+# terminal, so a print() from inside a request can sit in a buffer and never
+# reach the platform's log viewer — which is precisely when you need it, since
+# the visitor only ever sees "the assistant is temporarily unavailable" and the
+# real reason lives in this one line. logging writes through the handler
+# configured in compass/settings.py and is not subject to that buffering.
+log = logging.getLogger("compass.answer")
 
 # Overridable so you can switch models without editing code. gpt-oss-120b on
 # Groq is fast and free-tier friendly; the OpenAI-compatible client means
@@ -48,51 +57,6 @@ MAX_CHARS = 600
 # question. For a bot on a public website, the second failure is much worse,
 # so this errs toward refusing.
 CONFIDENCE_FLOOR = 0.30
-
-# =============================================================================
-#  THE CALL PARAMETERS — ONE DEFINITION, SHARED BY EVERY CALLER.
-#
-#  These live in a named dict rather than inline at the call site for a reason
-#  that cost an evening: `manage.py diagnose` originally duplicated the whole
-#  create() call with its own copy of these values. Fixing max_tokens here did
-#  nothing to the diagnostic, which kept reporting the old failure — so the
-#  tool built to find the bug was reporting a different bug of its own.
-#
-#  A diagnostic that reimplements what it measures does not measure it. Sharing
-#  one dict makes that impossible: there is nowhere for the two to drift apart.
-# =============================================================================
-LLM_PARAMS = {
-    # JSON mode constrains sampling so the output is valid JSON — no ```json
-    # fences, no "Sure! Here you go:" preamble to strip.
-    "response_format": {"type": "json_object"},
-
-    # Near-deterministic. For a classification-shaped task creativity is not a
-    # feature: the same question should get the same answer.
-    "temperature": 0.1,
-
-    # ---- THIS NUMBER IS LOAD-BEARING. DO NOT LOWER IT. ---------------------
-    # gpt-oss is a REASONING model: it emits internal reasoning tokens before
-    # its visible output, and BOTH count against max_tokens.
-    #
-    # At 200 the reasoning consumed the whole budget, the JSON object was never
-    # completed, and Groq rejected the request outright:
-    #
-    #     400 json_validate_failed, failed_generation: ''
-    #
-    # Maximally confusing to debug: the error says "adjust your prompt" and the
-    # prompt is fine, and the exception surfaces to the visitor as "temporarily
-    # unavailable" — pointing you at the network rather than a token budget.
-    "max_tokens": 512,
-
-    # Keep the reasoning short. This is a routing decision over three short
-    # candidates, not a maths problem; long deliberation adds latency and
-    # tokens without improving the choice. It is also the other half of the fix
-    # above — less reasoning leaves more budget for the actual JSON.
-    #
-    # NOTE: a Groq extension, not part of the OpenAI-compatible core. Pointing
-    # this client at a provider that does not support it means removing it.
-    "reasoning_effort": "low",
-}
 
 SYSTEM = """You are a helpful assistant for one event's website. You are given a visitor's question and NUMBERED candidate sections of information.
 
@@ -190,7 +154,13 @@ def answer(query, chunks, vecs, llm, floor=CONFIDENCE_FLOOR):
                 {"role": "user", "content": USER_TEMPLATE.format(
                     candidates=_build_candidates(results), query=query)},
             ],
-            **LLM_PARAMS,
+            # JSON mode constrains sampling so the output is valid JSON — no
+            # ```json fences, no "Sure! Here you go:" preamble to strip.
+            response_format={"type": "json_object"},
+            # Deterministic. For a classification-shaped task, creativity is
+            # not a feature: the same question should get the same answer.
+            temperature=0,
+            max_tokens=200,
         )
         parsed = json.loads(resp.choices[0].message.content)
     except Exception as e:
@@ -199,7 +169,13 @@ def answer(query, chunks, vecs, llm, floor=CONFIDENCE_FLOOR):
         # truncated by max_tokens (400). Previously any of them propagated out
         # as an HTTP 500 the front end could not parse. A widget should degrade
         # to "temporarily unavailable", never to a broken response.
-        print(f"[answer] LLM call failed: {type(e).__name__}: {e}")
+        # exc_info=True attaches the traceback. The exception TYPE is the
+        # whole diagnosis here: AuthenticationError means a bad or revoked
+        # key, NotFoundError means the model id is not available to this
+        # account, RateLimitError means the budget is spent. All three reach
+        # the visitor as the same sentence, so this log is the only place the
+        # difference is recorded.
+        log.error("LLM call failed: %s: %s", type(e).__name__, e, exc_info=True)
         return {"found": False,
                 "reason": "the assistant is temporarily unavailable",
                 "score": score}
