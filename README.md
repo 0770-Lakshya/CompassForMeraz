@@ -10,7 +10,7 @@ the navigation machinery removed.
 ## Quick start
 
 ```powershell
-python -m venv .venv
+py -3.12 -m venv .venv      # use Python 3.12: onnxruntime has no 3.14 wheel yet
 .venv\Scripts\activate
 pip install -r requirements.txt
 

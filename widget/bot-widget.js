@@ -47,7 +47,7 @@
  *      <script src="bot-widget.js" data-api="http://localhost:8001"></script>
  *
  *  ATTRIBUTES
- *      data-api     API base URL          (default http://localhost:8000)
+ *      data-api     API base URL          (default http://localhost:8001)
  *      data-name    set's name plate      (default "Ask Meraz")
  *      data-channel channel number        (default "7")
  *      data-side    "left" or "right"     (default "right")
@@ -69,7 +69,7 @@
 
   // `me &&` guards currentScript being null in odd loading situations. Without
   // it, reading .dataset of null throws and the widget never appears.
-  const API = (me && me.dataset.api) || "http://localhost:8000";
+  const API = (me && me.dataset.api) || "http://localhost:8001";
   const NAME = (me && me.dataset.name) || "Ask Meraz";
   const CHANNEL = (me && me.dataset.channel) || "7";
   const LEFT = (me && me.dataset.side) === "left";
