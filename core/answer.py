@@ -21,6 +21,7 @@ read more: https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/
 import json
 import logging
 import os
+import re
 
 from core.retrieval import search
 
@@ -68,12 +69,22 @@ Rules:
 - Answer the visitor directly, leading with the answer itself.
 - For a yes/no question, the FIRST WORD must be the truthful answer to that question, not an acknowledgement. "Yes" means the thing asked about IS the case; "No" means it is not. Example: asked "is there a registration fee?" when entry is free, the answer begins "No" — beginning with "Yes" there would state the opposite of the truth.
 - Never describe the section, the page or the website's structure. Never write "this section", "it states", "it explains", "the page says", "according to", or "confirming".
+- Never open with a verb that describes what the section DOES. Banned openings: "Lists", "Provides", "Gives", "Covers", "Includes", "Explains", "Details", "Contains", "Shows", "Mentions", "States", "Outlines", "Specifies". Those are descriptions of a section, not answers. Write the actual values instead: the prices, the numbers, the names, the URL itself.
+- When the visitor asks a price, a cost or a fee, the answer must contain the amount in rupees. When they ask where to buy, register or apply, the answer must contain the actual link.
 - Never mention candidates, numbers, scores, or that you were given a choice.
 - Keep the explanation under 30 words, one or two sentences.
 - Do not hedge. No "likely", "probably", "may".
 
 Respond with ONLY a JSON object:
 {"index": <candidate number, or 0 to reject all>, "explanation": "..."}"""
+
+# WHY THERE ARE NO WORKED EXAMPLES IN THIS PROMPT.
+#
+# Adding a BAD/GOOD pair to teach directness was tried and made things worse: the
+# model copied the shape of the BAD sentence and started every answer with
+# "Candidate 1 directly lists ...". An example of a failure mode is still an
+# example of a sentence a small model will happily produce. The rules above plus
+# the retry below are what actually holds.
 
 # WHY THE BANNED PHRASINGS ARE LISTED EXPLICITLY, and why the yes/no rule is
 # three sentences long: both are copied from real failures.
@@ -98,6 +109,109 @@ USER_TEMPLATE = """CANDIDATES:
 {candidates}
 
 VISITOR QUESTION: {query}"""
+
+# A prompt instruction alone does not hold every time. Given a section whose
+# whole content is a list of prices, the model still sometimes opens with
+# "Lists all pass prices: ..." — a description of the section instead of the
+# answer. At temperature 0 that is reproducible, so the fix belongs in code,
+# not in more emphasis in the prompt.
+#
+# Only strips when a description verb is followed by a delimiter and then the
+# payload, so "Includes a free T-shirt" (no delimiter) is left alone. The
+# payload is never re-capitalised: answers can legitimately start with a URL
+# or a currency symbol.
+_META_PREFIX = re.compile(
+    r"^(?:lists|provides|gives|covers|includes|explains|details|contains|"
+    r"shows|mentions|states|outlines|specifies)\b[^:;.!?\n]{0,80}?[:;—–]\s*",
+    re.IGNORECASE,
+)
+
+
+def _strip_meta_prefix(text):
+    """Turn "Lists all pass prices: ₹99 ..." into "₹99 ...".
+
+    Runs on the MODEL's output, so it also covers the "Candidate 1 lists ..."
+    leak seen in production, which is the same failure one clause later.
+    """
+    if not isinstance(text, str):
+        return text
+    return _META_PREFIX.sub("", text.strip(), count=1)
+
+
+# Catches the shapes the prefix strip cannot: a description with no delimiter
+# ("Provides full ticket price range and individual pass costs, matching the
+# visitor's request") and the "Candidate 1 directly states ..." leak. These are
+# detected rather than repaired, because there is no fact inside them to keep —
+# the answer has to be asked for again.
+_META_OPENING = re.compile(
+    r"^(?:lists|provides|gives|covers|includes|explains|details|contains|"
+    r"shows|mentions|states|outlines|specifies|candidate\s*\d+)\b",
+    re.IGNORECASE,
+)
+_META_TAIL = re.compile(
+    r"matching the (?:visitor|question|request)|"
+    r"directly (?:answers|states|lists|gives|provides|mentions)|"
+    r"the visitor'?s (?:question|request)",
+    re.IGNORECASE,
+)
+
+RETRY_NOTE = (
+    "That reply describes the section instead of answering the question. "
+    "Rewrite it as the fact itself, beginning with the actual values, prices, "
+    "names or URL from the candidate you chose. Do not mention candidates, "
+    "passages or the section."
+)
+
+
+def _looks_meta(text):
+    """True when the sentence describes the source instead of answering it."""
+    if not isinstance(text, str) or not text.strip():
+        return False
+    t = text.strip()
+    return bool(_META_OPENING.match(t) or _META_TAIL.search(t))
+
+
+def _complete(llm, messages, attempts=2):
+    """JSON-mode completion, retried once on failure.
+
+    Groq returns `400 json_validate_failed` with `failed_generation: ""` at
+    random — more often on longer candidate blocks — and the answer was being
+    lost to "the assistant is temporarily unavailable" for a request that
+    succeeds on the second try. The retry is on the EXCEPTION, not on a bad
+    answer: a malformed refusal is still a refusal.
+
+    gpt-oss-120b is a REASONING model and its hidden reasoning tokens are billed
+    against max_tokens. Measured on "who are the conveners": with the default
+    effort it spent 1498 of 1500 tokens thinking, returned finish_reason
+    "length" with EMPTY content, and Groq reported that as
+    `json_validate_failed`. reasoning_effort="low" brought the same call down to
+    23 reasoning tokens and a valid answer, in a fraction of the time.
+
+    Picking the candidate and quoting a fact out of it is not a task that
+    benefits from long chains of thought, so low effort is the right default
+    here, and the max_tokens is left high enough that a verbose section can
+    still be answered in full.
+    """
+    last = None
+    for _ in range(attempts):
+        try:
+            resp = llm.chat.completions.create(
+                model=LLM_MODEL,
+                messages=messages,
+                # JSON mode constrains sampling so the output is valid JSON — no
+                # ```json fences, no "Sure! Here you go:" preamble to strip.
+                response_format={"type": "json_object"},
+                # Deterministic. For a classification-shaped task, creativity is
+                # not a feature: the same question should get the same answer.
+                temperature=0,
+                max_tokens=1500,
+                reasoning_effort="low",
+            )
+            return json.loads(resp.choices[0].message.content)
+        except Exception as e:  # noqa: BLE001 - re-raised below, narrowed by the caller
+            last = e
+            log.warning("completion attempt failed: %s: %s", type(e).__name__, e)
+    raise last
 
 
 def _build_candidates(results):
@@ -143,26 +257,36 @@ def answer(query, chunks, vecs, llm, floor=CONFIDENCE_FLOOR):
                 "reason": "I don't have information about that.",
                 "score": score}
 
+    # The system role carries the rules; the user role carries the DATA.
+    # Keeping them separate is basic prompt hygiene and the first line of
+    # defence against prompt injection.
+    messages = [
+        {"role": "system", "content": SYSTEM},
+        {"role": "user", "content": USER_TEMPLATE.format(
+            candidates=_build_candidates(results), query=query)},
+    ]
+
     try:
-        resp = llm.chat.completions.create(
-            model=LLM_MODEL,
-            messages=[
-                # The system role carries the rules; the user role carries the
-                # DATA. Keeping them separate is basic prompt hygiene and the
-                # first line of defence against prompt injection.
-                {"role": "system", "content": SYSTEM},
-                {"role": "user", "content": USER_TEMPLATE.format(
-                    candidates=_build_candidates(results), query=query)},
-            ],
-            # JSON mode constrains sampling so the output is valid JSON — no
-            # ```json fences, no "Sure! Here you go:" preamble to strip.
-            response_format={"type": "json_object"},
-            # Deterministic. For a classification-shaped task, creativity is
-            # not a feature: the same question should get the same answer.
-            temperature=0,
-            max_tokens=512,
-        )
-        parsed = json.loads(resp.choices[0].message.content)
+        parsed = _complete(llm, messages)
+        # ONE corrective retry, only on the failure that actually reaches
+        # visitors: a sentence about the section rather than the fact in it.
+        # Feeding the bad sentence back with a concrete instruction works far
+        # better than adding worked examples to the system prompt, which taught
+        # the model the shape of the bad answer instead of avoiding it.
+        if _looks_meta(parsed.get("explanation", "")):
+            log.info("meta-style answer, retrying once: %r",
+                     parsed.get("explanation", "")[:80])
+            # Its own try/except on purpose: a second call that fails (a Groq
+            # 400 json_validate_failed is routine here) must not throw away a
+            # usable first answer. A mediocre answer beats "unavailable".
+            try:
+                parsed = _complete(llm, messages + [
+                    {"role": "assistant", "content": json.dumps(parsed)},
+                    {"role": "user", "content": RETRY_NOTE},
+                ])
+            except Exception:
+                log.warning("corrective retry failed; keeping the first answer",
+                            exc_info=True)
     except Exception as e:
         # Every one of these has actually happened on this project: a model id
         # decommissioned (404), a free-tier rate limit (429), JSON mode
@@ -198,7 +322,7 @@ def answer(query, chunks, vecs, llm, floor=CONFIDENCE_FLOOR):
     return {
         "found": True,
         "heading": chunk["heading"],
-        "explanation": parsed.get("explanation", ""),
+        "explanation": _strip_meta_prefix(parsed.get("explanation", "")),
         "confidence": chunk_score,
         # Empty string when the fact has no page of its own. The widget uses it
         # to offer a link and simply omits it when absent.

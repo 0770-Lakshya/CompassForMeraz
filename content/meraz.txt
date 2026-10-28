@@ -113,6 +113,16 @@ url: https://meraz7.vercel.app/passes/
 Pass prices: Access Pass ₹99, Day 2 Pronites Pass ₹299, Day 3 Pronites Pass
 ₹499, Accommodation Pass ₹3,499. In a group of 10 or more, Day 2 is ₹249,
 Day 3 is ₹449 and Accommodation is ₹2,999 per person.
+Buy passes online at https://meraz.ksverse.in/ — the booking link on the
+Passes page of the Meraz website.
+
+# What is the ticket price for Meraz 7.0
+url: https://meraz7.vercel.app/passes/
+Tickets (passes) cost between ₹99 and ₹3,499. The Access Pass, a single-day
+entry ticket, is ₹99. The Day 2 Pronites Pass is ₹299, the Day 3 Pronites
+Pass is ₹499, and the three-day Accommodation Pass is ₹3,499. Groups of 10 or
+more pay ₹249, ₹449 and ₹2,999 per person respectively. Buy tickets online at
+https://meraz.ksverse.in/.
 
 # What passes are available and what do they cost
 url: https://meraz7.vercel.app/passes/
@@ -366,62 +376,62 @@ The 19 Culturals events: General Quiz, NSFW Quiz, Photo of the Fest: Candid Edit
 ## General Quiz
 url: https://meraz7.vercel.app/events/
 A quiz covering a wide range of topics, from history and science to culture, sports and current affairs.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSf6o9vtxPG6X7FGy_3hMhrI6yYkDtzZD6PMbb2yfGwNARxGaA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## NSFW Quiz
 url: https://meraz7.vercel.app/events/
 A quiz on umm well, rather interesting things 👀👀
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSdNCsPZwhDlsKg_IMiopIMgTlQAXHThSgMNqSHBTNaHKIV-ig/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Photo of the Fest: Candid Edition
 url: https://meraz7.vercel.app/events/
 Capture the spirit of Meraz through your lens! Photo of the Fest is an online photography competition where participants capture candid moments, genuine emotions, and the vibrant atmosphere of the fest. Showcase your creativity by turning ordinary moments into extraordinary photographs that tell a story. Submit your best shots and let your perspective stand out! In collaboration with DesignX Kathachitra.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSfL8uoSPSRBuaK9Ar86v4m1l1Ooc47RYLGesYQiCZnrR9ewdg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Youth Parliament
 url: https://meraz7.vercel.app/events/
 Step into the shoes of national lawmakers in a dynamic simulation where participants debate pressing policies, draft legislation, and navigate complex parliamentary procedures. It is a premier platform for young leaders to test their diplomacy, hone their public speaking, and drive impactful change on a competitive stage.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/1dW48KKFh68GHb3SnYBqbcmvuLoSW7enl0uupStI9Heo/edit
 
 ## Abhivyakti
 url: https://meraz7.vercel.app/events/
 Immerse yourself in the rhythm of spoken word at our Hindi Slam, a vibrant stage where poets breathe life into raw emotions and compelling stories. Join us for an electrifying event that celebrates the power, passion, and beauty of Hindi performance poetry.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSdpLvIuoquLCncBn15rJbAVtkCM1fGRfRJ59yGnbfk3MNH8dQ/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Murder Mystery
 url: https://meraz7.vercel.app/events/
 A murder mystery is a themed event where there are fictional characters in a fictional story. The participants will then work together to solve a fictitious murder which occurs during the event. Most of the characters are gray. They are all suspects of the murder and have to be investigated by the participating teams to solve the mystery. Characters can’t lie but mislead the participants in different ways.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSfjnwDE6p6Thx9_rcFvb5-VsH_izrN6OaZebd1uelAmZOSb-A/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Pukaar - Nukkad Natak
 url: https://meraz7.vercel.app/events/
 Experience the raw energy of Nukkad Natak! This powerful street play brings social issues to life with passion, humor, and heart. With minimal props and dynamic performances, it’s an exciting, spontaneous way to engage the crowd and make a real impact.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScFc9t8P2pMhO2GeyuTqyb9SfNmrwQKlFW1e-4tJjhwEMW-mg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Dance Solitaire - Solo Dance
 url: https://meraz7.vercel.app/events/
 An open solo dance battle/performance round, freestyle or choreographed, judged on technique, musicality, and stage presence. Held live on campus.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScnRnrXN8zChlNfYjqPnp-0tXWAYZmfV-IKvN6of3Am0UhgmA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## IN10SITY
 url: https://meraz7.vercel.app/events/
 A team-based choreographed dance battle open to multiple genres, judged on synchronisation, choreography, and overall performance.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScimvHXNK4uN47KeDSUf9eV4ULi0BSvc-7l_Xjp6-hLBWnatA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Fragments
 url: https://meraz7.vercel.app/events/
 Every piece tells a story, but together, they create a masterpiece! In Fragments, team up with your crew, unleash your creativity, and turn individual puzzle pieces into one spectacular work of art. Can your fragments come together in harmony?
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSeuo_fVnd9ZMMmdfOFgnOTvdym-5GwI3rgDPfM2t4KEVh78wg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Switch
 url: https://meraz7.vercel.app/events/
 Two artists, two canvases, and a switch every two minutes! Just when you find your rhythm, it's time to switch. Adapt to your partner's ideas, build on their strokes, and see how creative chaos transforms into art.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScEh8ZTid9Gdxr0n7JTvRnadVs0XjzamGlb9j93or0zWE66-A/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Beyond Sight
 url: https://meraz7.vercel.app/events/
 What happens when vision meets imagination? In Beyond Sight, one partner paints blindfolded while the other guides every stroke. Put your trust, communication, and creativity to the test, and turn the unseen into a masterpiece!
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScMtrKignqp-jM41_1S57IRnZ2K1n9iuFZqG7_vwCBdHVkVwA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Nirmiti: Live Digital Art Challenge
 url: https://meraz7.vercel.app/events/
@@ -431,32 +441,32 @@ Category: Culturals. Registration is not open yet; the Events page lists it as C
 ## Chitrakatha: Photo-Story Manipulation Challenge
 url: https://meraz7.vercel.app/events/
 Shoot 6 to 7 original photographs that narrate a story, then take them into Photoshop and amplify the mood by painting, grading, and drawing over your frames. Your camera is the pen, so bring a story worth showing.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSdJ1IDUX84otHfBRFPs7W2WqFjah3YD2HyFG-8NZj2OLaettA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Shredded: Battle of Bands
 url: https://meraz7.vercel.app/events/
 Turn up the volume, unleash the riffs, and let the battle begin! In Shredded – Battle of Bands, bring your band together, ignite the stage with electrifying solos, thunderous beats, and roaring vocals, and prove that your music has what it takes to steal the show. When the amps are cranked up and the stage is yours, will your band shred its way to victory?
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSf48UrE3ZTgPkzLWjK7eSJIqvfAaQTkbZros_M3GaYf3I9Hzg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Sur-Real
 url: https://meraz7.vercel.app/events/
 Some voices are heard, but some are felt! In Sur-Real, take the stage, let your melodies speak, and transform every note into an unforgettable experience. Pour your heart into every lyric, captivate the audience with your sur, and let your voice create magic that transcends the ordinary. Are you ready to make the unreal sound sur-real?
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSed-jnryk1-h5F424TlR6zXfs8Rzm8QGbLekZvpMt5jd78UMw/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Copy Cut: Movie Scene Recreation
 url: https://meraz7.vercel.app/events/
 Participants are invited to select a movie sequence of their choice, ranging from dramatic dialogues to simple comedic exchanges, and recreate it. Elaborate sets and professional lighting are not required; instead, we encourage the innovative use of accessible locations, props, and standard camera equipment (including smartphones) to capture the core essence of the original sequence.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://forms.gle/kE6VYZryHZnZUXNz8
 
 ## Alter Ego
 url: https://meraz7.vercel.app/events/
 AlterEgo is the perfect opportunity to step into the shoes of a character you've always dreamed of becoming. No strict rules, just express yourself and have fun! There are no boundaries to what you can become. You also win a chance to get exciting prizes in various games.
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSet9Nia2jSb0EGigYV6LZI5DAzofSV9NZupzAp78KV_pe0RvA/viewform?usp=publish-editor
 
 ## Attire Spectra
 url: https://meraz7.vercel.app/events/
 The platform for participants to showcase their style, confidence, and personality while walking the runway. Bring your best looks, own the stage, and leave the audience mesmerized with your attitude and presence!
-Category: Culturals. Registration is through the Register link on the Events page.
+Category: Culturals. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSeaEDQDDLrP0OCNP8KQM9AUM_e8HQnOqVsxsDnHol3gT_d1hA/viewform?usp=sharing&ouid=111708333119112713425
 
 # What are the Sci-Tech events at Meraz 7.0
 url: https://meraz7.vercel.app/events/
@@ -466,52 +476,52 @@ The 15 Sci-Tech events: Messier Marathon, RC Plane Comp, Battleship, Circuit Syn
 ## Messier Marathon
 url: https://meraz7.vercel.app/events/
 Analyze real NASA data to track Messier objects and break a chain of locked puzzles.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://forms.gle/sAUpHV2emBz7qVsdA
 
 ## RC Plane Comp
 url: https://meraz7.vercel.app/events/
 Design, build, and fly an RC aircraft from scratch—put your engineering, flight performance, and precision to the test.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://forms.gle/SxgkoaqZAMNwSGmi7
 
 ## Battleship
 url: https://meraz7.vercel.app/events/
 Think you played Battleship? Experience the classic game reinvented as 4 teams clash live with custom consoles, shields, sonar scans, and hidden mines to be the last fleet standing.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://forms.gle/96RGvbzWQVBoZXA39
 
 ## Circuit Syndicate
 url: https://meraz7.vercel.app/events/
 Step into the arena with your syndicate—scavenge, build, and program your way to victory!
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/1Jys22gdJ3of8CLO96P9mN9biqFVEVZU87R8uN5sJ-ys/edit
 
 ## The Lattice
 url: https://meraz7.vercel.app/events/
 One campus. Contradicting trails. Trust no isolated story—trade intel, connect the missing pieces, and uncover the organization's hidden truth.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSf0UAJ5xOsvdRmg-puMNfyPFC5OFTThFdcjbX0NtxRnbU4iMw/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Nightjar
 url: https://meraz7.vercel.app/events/
 When NEXUS falls and the festival goes dark, you are the last line of defense. Trace the worm, expose the false insider, and isolate Patient Zero before the show begins.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSdbyid58_7dmWNN8bRcEazq4-qN9cDQ1amEqVTUbbpJ2r0auA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Gandhi Hackathon
 url: https://meraz7.vercel.app/events/
 A hackathon focused on social innovation and problem-solving inspired by Gandhian principles. Registration fee applies.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSfhBb3Iv_eMVsbf3zkAk-NrjRrqmuj9gZsXUCzLSgd6FJvCrw/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Agent Wars
 url: https://meraz7.vercel.app/events/
 Build and deploy autonomous AI agents to compete in a series of challenges. Test your agent's reasoning, planning, and adaptation skills.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSeR2fMq4Qd2fzUDvs4JN1x9vslLr-w4aNgKjDKuwDBwjHjWnA/viewform?usp=sharing&ouid=110638439702340357486
 
 ## Cad Rift
 url: https://meraz7.vercel.app/events/
 CAD design competition. Test your modeling skills and creativity as you design innovative solutions through challenging design problems.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSeTVcli85tKS4GYVsUAC9rGWVlCGMIHWnkRozpzGWzUH6pgMg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Runtime Roulette
 url: https://meraz7.vercel.app/events/
 A 5-round coding contest featuring Easy, Medium, and Hard problems in each round. Participants wager virtual coins, earn multipliers for solving problems, and compete to maximize their balance and top the leaderboard.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSf08QWDsQQ2WNWpWf2-AcAggdJR25CLeOQEeZHQkzNFwMSKsQ/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Jailbreaking LLM
 url: https://meraz7.vercel.app/events/
@@ -521,22 +531,22 @@ Category: Sci-Tech. Registration is not open yet; the Events page lists it as Co
 ## Evo AI: Evolve, Adapt, Conquer
 url: https://meraz7.vercel.app/events/
 One agent. Five rounds. Infinite possibilities. Push the limits, evolve your AI, and outsmart the leaderboard!!
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSe_LQL-PxkT-YMjU5-QUOcov8zlngQIexOyqesRsHEX29Fh6g/viewform
 
 ## Line Follower
 url: https://meraz7.vercel.app/events/
 Watch high-speed robots race against the clock! Custom-built bots take on sharp turns and tough tracks completely on their own.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSf1WWrXIwZrtwMKbVSB262c3gONF6LSo41ppEaoGB7LSX6PQg/viewform?usp=sharing&ouid=110638439702340357486
 
 ## Robo Soccer
 url: https://meraz7.vercel.app/events/
 Showcase your engineering skills as robots compete in an electrifying soccer game to score points and win!
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScj8kt3yDmqwX9nSCvpUalLdcTqwhhzcnOfrzQ7SE30nyGD4Q/viewform?usp=sharing&ouid=111708333119112713425
 
 ## VibeChain
 url: https://meraz7.vercel.app/events/
 Build a full-stack blockchain dApp with AI, write smart contracts, and hunt for vulnerabilities in this fast-paced 3-hour hackathon.
-Category: Sci-Tech. Registration is through the Register link on the Events page.
+Category: Sci-Tech. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSfMoL_ZJsfg6Yrdy7s8PbfGDbEI6t7gTUXLshiNq5CpR9njHA/viewform?usp=publish-editor
 
 # What are the Informals and Varchasva events at Meraz 7.0
 url: https://meraz7.vercel.app/events/
@@ -676,22 +686,22 @@ Category: Informals and Varchasva. Registration is on the spot at the stall.
 ## Futsal Championship
 url: https://meraz7.vercel.app/events/
 Compete in an action-packed Futsal tournament.
-Category: Informals and Varchasva. Registration is through the Register link on the Events page.
+Category: Informals and Varchasva. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScyG_eARGHIUbLvOtJrle2EUIxkn9GgywgkIfPUagwSZbsFng/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Basketball League
 url: https://meraz7.vercel.app/events/
 Shoot, dunk, and dominate the court!
-Category: Informals and Varchasva. Registration is through the Register link on the Events page.
+Category: Informals and Varchasva. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSeewj6rd_gJPc0AINTqdTLxjm2ueQUjXlJWZuLmRw5UD5lkJg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Box Cricket
 url: https://meraz7.vercel.app/events/
 Swing, smash, and own the box!.
-Category: Informals and Varchasva. Registration is through the Register link on the Events page.
+Category: Informals and Varchasva. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLSfEWXvYVZQHij47rULHhbDeBWtHeZVbesvpV8ZyUQvOj83DMA/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Volleyball
 url: https://meraz7.vercel.app/events/
 Set, spike, and rule the court!
-Category: Informals and Varchasva. Registration is through the Register link on the Events page.
+Category: Informals and Varchasva. Register here (IIT Bhilai participants): https://docs.google.com/forms/d/e/1FAIpQLScRIm6OW7qRPvl0U3JrCK0MF-yqPEF8Zl8arCBlz1oEoiNeNg/viewform?usp=sharing&ouid=111708333119112713425
 
 ## Valorant
 url: https://meraz7.vercel.app/events/
@@ -949,3 +959,91 @@ url: https://meraz7.vercel.app/passes/
 The website does not state an age limit for the fest or for individual events.
 It does say that campus entry needs a valid Access Pass or Student Pass, and
 that the Access Pass is for students with a valid student ID card.
+
+# Who are the Meraz 7.0 conveners and what are their phone numbers
+url: https://meraz7.vercel.app/contact/
+Meraz 7.0 team contacts: Fest Head Arush Ranjan +91 7780070550; Fest Convener
+Kumar Utkarsh +91 7667416430; Finance: Varshitha +91 6281521833 and Ankan
+Mondal +91 9064825588; Cultural: Andiyappan Rohan +91 6303011550 and Tancia
+Boro +91 7002108549; Management: Banotu Santhosh +91 7013751880; Sci-Tech:
+Aditya Girish Seoker +91 9511629108 and Kanad Bajpai +91 9302860795;
+Outreach: Stuti Jain +91 7440779990 and Lanka Devi Satwika +91 9177926758;
+Sports and Informals: Shubham Jha +91 8797717222 and Harsh Vardhan Singh
++91 8400281102; Media and Design: Manjot Singh +91 7003603365 and Amit Patel
++91 8602275578. The Campus Ambassador programme is led by Harsh, the
+Outreach Lead, on +91 93275 96343.
+
+# What is the phone number of Arush Ranjan
+url: https://meraz7.vercel.app/contact/
+Arush Ranjan is the Fest Head for Meraz 7.0 and can be reached on +91 7780070550.
+
+# What is the phone number of Kumar Utkarsh
+url: https://meraz7.vercel.app/contact/
+Kumar Utkarsh is the Fest Convener for Meraz 7.0 and can be reached on +91 7667416430.
+
+# What is the phone number of Varshitha
+url: https://meraz7.vercel.app/contact/
+Varshitha is the Finance Convener for Meraz 7.0 and can be reached on +91 6281521833. Also known as: Varshita.
+
+# What is the phone number of Ankan Mondal
+url: https://meraz7.vercel.app/contact/
+Ankan Mondal is the Finance Convener for Meraz 7.0 and can be reached on +91 9064825588.
+
+# What is the phone number of Andiyappan Rohan
+url: https://meraz7.vercel.app/contact/
+Andiyappan Rohan is the Cultural Convener for Meraz 7.0 and can be reached on +91 6303011550. Also known as: Rohan.
+
+# What is the phone number of Tancia Boro
+url: https://meraz7.vercel.app/contact/
+Tancia Boro is the Cultural Convener for Meraz 7.0 and can be reached on +91 7002108549.
+
+# What is the phone number of Banotu Santhosh
+url: https://meraz7.vercel.app/contact/
+Banotu Santhosh is the Management Convener for Meraz 7.0 and can be reached on +91 7013751880. Also known as: Santhosh.
+
+# What is the phone number of Aditya Girish Seoker
+url: https://meraz7.vercel.app/contact/
+Aditya Girish Seoker is the Sci-Tech Convener for Meraz 7.0 and can be reached on +91 9511629108. Also known as: Aditya, Aditya Seoker, Aditya sir.
+
+# What is the phone number of Kanad Bajpai
+url: https://meraz7.vercel.app/contact/
+Kanad Bajpai is the Sci-Tech Convener for Meraz 7.0 and can be reached on +91 9302860795. Also known as: Kanad.
+
+# What is the phone number of Stuti Jain
+url: https://meraz7.vercel.app/contact/
+Stuti Jain is the Outreach Convener for Meraz 7.0 and can be reached on +91 7440779990. Also known as: Stuti.
+
+# What is the phone number of Lanka Devi Satwika
+url: https://meraz7.vercel.app/contact/
+Lanka Devi Satwika is the Outreach Convener for Meraz 7.0 and can be reached on +91 9177926758. Also known as: Lanka, Satwika.
+
+# What is the phone number of Shubham Jha
+url: https://meraz7.vercel.app/contact/
+Shubham Jha is the Sports and Informals Convener for Meraz 7.0 and can be reached on +91 8797717222.
+
+# What is the phone number of Harsh Vardhan Singh
+url: https://meraz7.vercel.app/contact/
+Harsh Vardhan Singh is the Sports and Informals Convener for Meraz 7.0 and can be reached on +91 8400281102.
+
+# What is the phone number of Manjot Singh
+url: https://meraz7.vercel.app/contact/
+Manjot Singh is the Media and Design Convener for Meraz 7.0 and can be reached on +91 7003603365. Also known as: Manjot.
+
+# What is the phone number of Amit Patel
+url: https://meraz7.vercel.app/contact/
+Amit Patel is the Media and Design Convener for Meraz 7.0 and can be reached on +91 8602275578.
+
+# What is the phone number of Harsh
+url: https://meraz7.vercel.app/outreach/
+Harsh is the Outreach Lead (Campus Ambassador programme) for Meraz 7.0 and can be reached on +91 93275 96343.
+
+# How many people attend Meraz
+url: https://meraz7.vercel.app/about/
+Meraz 7.0 lists 100+ events, 4000+ participants and a 2500+ online audience.
+
+# What does the Meraz 7.0 theme feel like
+url: https://meraz7.vercel.app/about/
+The Great Indian Reverie is described as a waking dream of colour, music and
+wonder: a projector flickering in a village square, a truck rolling past with
+Horn OK Please on its back, a transistor radio crackling from a windowsill.
+The theme calls itself pure paisa vasool.
